@@ -68,6 +68,13 @@ from . import csatqa
 from . import haerae
 from . import cmmlu
 
+# added by me
+from . import medmcqa
+from . import medqa_usmle
+from . import usmle_self_eval_step1
+from . import usmle_self_eval_step2
+from . import usmle_self_eval_step3
+
 ########################################
 # Translation tasks
 ########################################
@@ -350,6 +357,13 @@ TASK_REGISTRY = {
     **scrolls.construct_tasks(),
     **ceval.create_all_tasks(),
     **cmmlu.create_all_tasks(),
+
+    # added by me
+    "medmcqa": medmcqa.medmcqa,
+    "medqa_usmle": medqa_usmle.MedQA_USMLE,
+    "usmle_step1": usmle_self_eval_step1.usmle_self_eval_step1,
+    "usmle_step2": usmle_self_eval_step2.usmle_self_eval_step2,
+    "usmle_step3": usmle_self_eval_step3.usmle_self_eval_step3,
 }
 
 
