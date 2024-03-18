@@ -24,7 +24,7 @@ def parse_args():
         default=None,
         help="Maximal batch size to try with --batch_size auto",
     )
-    parser.add_argument("--device", type=str, default=None)
+    parser.add_argument("--device", type=str, default='cuda:0')
     parser.add_argument("--output_path", default=None)
     parser.add_argument(
         "--limit",

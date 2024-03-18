@@ -15,7 +15,7 @@ def parse_args():
     parser.add_argument("--tasks", default="all_tasks")
     parser.add_argument("--provide_description", action="store_true")
     parser.add_argument("--sets", type=str, default="val")  # example: val,test
-    parser.add_argument("--num_fewshot", type=int, default=1)
+    parser.add_argument("--num_fewshot", type=int, default=0)
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument("--num_examples", type=int, default=1)
     parser.add_argument("--description_dict_path", default=None)
