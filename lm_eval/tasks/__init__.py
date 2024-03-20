@@ -75,6 +75,10 @@ from . import usmle_self_eval_step1
 from . import usmle_self_eval_step2
 from . import usmle_self_eval_step3
 
+# ours
+from . import arc_tr
+from . import truthfulqa_tr
+
 ########################################
 # Translation tasks
 ########################################
@@ -151,6 +155,7 @@ TASK_REGISTRY = {
     "triviaqa": triviaqa.TriviaQA,
     "arc_easy": arc.ARCEasy,
     "arc_challenge": arc.ARCChallenge,
+    "arc_challenge_tr": arc_tr.ARCChallenge, # Ours
     # "quac": quac.QuAC, # not implemented yet
     "logiqa": logiqa.LogiQA,
     "hellaswag": hellaswag.HellaSwag,
@@ -177,6 +182,7 @@ TASK_REGISTRY = {
     "ethics_utilitarianism": hendrycks_ethics.EthicsUtilitarianism,
     "ethics_virtue": hendrycks_ethics.EthicsVirtue,
     "truthfulqa_mc": truthfulqa.TruthfulQAMultipleChoice,
+    "truthfulqa_mc_tr": truthfulqa_tr.TruthfulQAMultipleChoice, # ours
     "truthfulqa_gen": truthfulqa.TruthfulQAGeneration,
     # dialogue
     "mutual": mutual.MuTual,
