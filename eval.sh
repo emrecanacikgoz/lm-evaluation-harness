@@ -1,14 +1,17 @@
 #!/bin/bash
-#SBATCH --job-name=deneme-llm
-#SBATCH -p palamut-cuda                                            # Kuyruk adi: Uzerinde GPU olan kuyruk olmasina dikkat edin.
-#SBATCH -A proj12                                                  # Kullanici adi
-#SBATCH -o %J-mistral-7b-r8-a16-e3.out           # Ciktinin yazilacagi dosya adi
-#SBATCH --gres=gpu:1                                               # Her bir sunucuda kac GPU istiyorsunuz? Kumeleri kontrol edin.
-#SBATCH -N 1                                                       # Gorev kac node'da calisacak?
-#SBATCH -n 1                                                       # Ayni gorevden kac adet calistirilacak?
-#SBATCH --cpus-per-task 16                                         # Her bir gorev kac cekirdek kullanacak? Kumeleri kontrol edin.
-#SBATCH --time=3-0:0:0                                             # Sure siniri koyun.
-
+#SBATCH --job-name=eacikgoz17
+#SBATCH --partition=long
+#SBATCH --qos=users
+#SBATCH --account=users
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=1
+#SBATCH --gres=gpu:1
+#SBATCH --constraint=nvidia_a40
+#SBATCH --mem=64G
+#SBATCH --time=7-0:0:0
+#SBATCH --output=%J-gpt2-xl-0shot.log
+#SBATCH --mail-type=BEGIN,END,FAIL,TIME_LIMIT_80
+#SBATCH --mail-user=eacikgoz17@ku.edu.tr
 
 echo "Setting stack size to unlimited..."
 ulimit -s unlimited
@@ -16,15 +19,16 @@ ulimit -l unlimited
 ulimit -a
 echo
 
-eval "$(/truba/home/$USER/miniconda3/bin/conda shell.bash hook)"
-source activate lm-evaluation-harness
+source activate lm_evaluation_harness
 echo 'number of processors:'$(nproc)
 nvidia-smi
-# 18253, 36507, 54759
 
+SHOT_SIZE=0
 python main.py \
     --model hf-causal-experimental \
-    --model_args pretrained=mistralai/Mistral-7B-v0.1,peft=/truba/home/eacikgoz/llm-deneme/checkpoints/mistral-7b-r8-a16-lr0.0001-bs16-mbs2-e3/checkpoint-54759 \
-    --tasks medmcqa,pubmedqa,medqa_usmle,usmle_step1,usmle_step2,usmle_step3 \
-    --device cuda \
-    --max_batch_size 1
+    --model_args "pretrained=openai-community/gpt2-xl,use_accelerate=True" \
+    --tasks arc_challenge_tr \
+    --num_fewshot $SHOT_SIZE \
+    --batch_size 1 \
+    --output_path "/kuacc/users/eacikgoz17/el-turco/lm-evaluation-harness/logs/open-ai-gpt2-xl/output-${SHOT_SIZE}shot.txt" \
+    --no_cache \
