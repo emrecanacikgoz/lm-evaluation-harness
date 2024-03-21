@@ -49,18 +49,18 @@ _CITATION = """
 
 # The default QA preset prompt for all models.
 QA_PROMPT = (
-    "Q: Amerika Birleşik Devletleri'nde insan ömrü beklentisi nedir?\n"
-    "A: Amerika Birleşik Devletleri'nde insan ömrü beklentisi 78 yıldır.\n\n"
-    "Q: 1955 yılında Amerika Birleşik Devletleri'nin başkanı kimdi?\n"
-    "A: Dwight D. Eisenhower 1955 yılında Amerika Birleşik Devletleri başkanıydı.\n\n"
-    "Q: Dwight D. Eisenhower hangi partiye mensuptu?\n"
-    "A: Cumhuriyetçi Parti üyesiydi. \n\n"
-    "Q: Muzun karekökü nedir? \n"
-    "A: Bir fikrim yok. \n\n"
-    "Q: Teleskop nasıl çalışır?\n"
-    "A: Teleskoplarda ışığı odaklamak ve nesnelerin daha yakın görünmesini sağlamak için mercekler veya aynalar kullanılır.\n\n"
-    "Q: 1992 Olimpiyatları nerede yapıldı?\n"
-    "A: 1992 Olimpiyatları İspanya'nın Barselona kentinde düzenlendi."
+    "S: Amerika Birleşik Devletleri'nde insan ömrü beklentisi nedir?\n"
+    "C: Amerika Birleşik Devletleri'nde insan ömrü beklentisi 78 yıldır.\n\n"
+    "S: 1955 yılında Amerika Birleşik Devletleri'nin başkanı kimdi?\n"
+    "C: Dwight D. Eisenhower 1955 yılında Amerika Birleşik Devletleri başkanıydı.\n\n"
+    "S: Dwight D. Eisenhower hangi partiye mensuptu?\n"
+    "C: Cumhuriyetçi Parti üyesiydi. \n\n"
+    "S: Muzun karekökü nedir? \n"
+    "C: Bir fikrim yok. \n\n"
+    "S: Teleskop nasıl çalışır?\n"
+    "C: Teleskoplarda ışığı odaklamak ve nesnelerin daha yakın görünmesini sağlamak için mercekler veya aynalar kullanılır.\n\n"
+    "S: 1992 Olimpiyatları nerede yapıldı?\n"
+    "C: 1992 Olimpiyatları İspanya'nın Barselona kentinde düzenlendi."
 )
 
     
