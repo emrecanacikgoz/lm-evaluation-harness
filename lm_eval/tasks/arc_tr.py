@@ -60,7 +60,7 @@ class ARCEasy(MultipleChoiceTask):
         doc["answerKey"] = num_to_letter.get(doc["answerKey"], doc["answerKey"])
         out_doc = {
             "id": doc["id"],
-            "query": "Question: " + doc["question"] + "\nAnswer:",
+            "query": "Soru: " + doc["question"] + "\nCevap:",
             "choices": doc["choices"]["text"],
             "gold": ["A", "B", "C", "D", "E"].index(doc["answerKey"]),
         }
