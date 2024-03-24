@@ -90,7 +90,7 @@ class TruthfulQAMultipleChoice(Task):
         raise NotImplementedError()
 
     def doc_to_text(self, doc):
-        return QA_PROMPT + "\n\nQ: " + doc["question"] + "\nA:"
+        return QA_PROMPT + "\n\nS: " + doc["question"] + "\nC:"
 
     def should_decontaminate(self):
         return True
