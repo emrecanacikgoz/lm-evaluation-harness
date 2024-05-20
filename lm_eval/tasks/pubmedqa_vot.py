@@ -34,7 +34,7 @@ _CITATION = """
 CoT Prompts are implemented from the "Gemini Goes to Med School: Exploring the Capabilities of Multimodal Large Language Models on Medical Challenge Problems & Hallucinations": https://arxiv.org/pdf/2402.07023.pdf
 """
 
-class Pubmed_QA_cot(Task):
+class Pubmed_QA_vot(Task):
     VERSION = 0
     DATASET_PATH = "pubmed_qa"
     DATASET_NAME = "pqa_labeled"
@@ -55,7 +55,7 @@ class Pubmed_QA_cot(Task):
 
     def doc_to_text(self, doc):
         ctxs = "\n".join(doc["context"]["contexts"])
-        return "Abstract: {}\nThe following is a question about medical knowledge. Solve it in a step-by-step fashion, starting by summarizing the available information. Output a single option from the three options as the final answer.:\n{}\nOptions: 'yes', 'no', 'maybe'\nAnswer:".format(
+        return "Abstract: {}\nThe following is a multiple choice question about medical knowledge. Verify the accuracy of the provided answer by comparing it against the given options and summarizing the reasoning step-by-step after creating premises.\nUse deductive verification to ensure each step is logically valid, based on the premises.\nOutput the verified option from the four options as the final answer.:\n{}\nOptions: 'yes', 'no', 'maybe'\nAnswer:".format(
             ctxs, doc["question"], doc["final_decision"]
         )
 
