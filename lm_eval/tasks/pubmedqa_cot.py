@@ -55,7 +55,7 @@ class Pubmed_QA(Task):
 
     def doc_to_text(self, doc):
         ctxs = "\n".join(doc["context"]["contexts"])
-        return "Abstract: {}\nThe following is a question about medical knowledge. Solve it in a step-by-step fashion, starting by summarizing the available information. Output a single option from the three options as the final answer.: {}\nOptions: 'yes', 'no', 'maybe'\nAnswer:".format(
+        return "Abstract: {}\nThe following is a question about medical knowledge. Solve it in a step-by-step fashion, starting by summarizing the available information. Output a single option from the three options as the final answer.:\n{}\nOptions: 'yes', 'no', 'maybe'\nAnswer:".format(
             ctxs, doc["question"], doc["final_decision"]
         )
 

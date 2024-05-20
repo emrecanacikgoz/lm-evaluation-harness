@@ -27,7 +27,7 @@ SHOT_SIZE=1
 python main.py \
     --model hf-causal-experimental \
     --model_args "pretrained=meta-llama/Llama-2-7b,use_accelerate=True" \
-    --tasks arc_challenge_tr \
+    --tasks medmcqa_cot, medqa_usmle_cot, pubmedqa_cot, usmle_step1_cot, usmle_step2_cot, usmle_step3_cot \
     --num_fewshot $SHOT_SIZE \
     --batch_size 1 \
     --output_path "/kuacc/users/hpc-aboz/lm-evaluation-harness/logs/output-${SHOT_SIZE}shot.txt" \

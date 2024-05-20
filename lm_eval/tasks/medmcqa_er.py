@@ -40,4 +40,4 @@ class medmcqa_cot(MultipleChoiceTask):
         options = doc['choices']
         formatted_options = '\n'.join([f"{chr(65+i)}. {option}" for i, option in enumerate(options)])
 
-        return f"The following is a multiple choice question about medical knowledge. Solve it in a step-by-step fashion, starting by summarizing the available information. Output a single option from the four options as the final answer.:\n{doc['query']}\nOptions:\n{formatted_options}\nAnswer:"
+        return f"The following is a multiple choice question about medical knowledge. Solve it in a step-by-step fashion, starting by summarizing the available information.\nProduce 11 generations of explanations and answers for the question. Then, provide a refined explanation and answer based on the original prompt, question, and the 11 generations.\nOutput a single option from the four options as the final answer.\n{doc['query']}\nOptions:\n{formatted_options}\nAnswer:"

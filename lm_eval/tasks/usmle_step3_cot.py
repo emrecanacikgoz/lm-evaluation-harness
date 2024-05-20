@@ -42,4 +42,4 @@ class usmle_self_eval_step3_cot(MultipleChoiceTask):
             options = doc['choices']
             formatted_options = '\n'.join([f"{chr(65+i)}. {option}" for i, option in enumerate(options)])
 
-            return f"The following is a multiple choice question about medical knowledge. Solve it in a step-by-step fashion, starting by summarizing the available information. Output a single option from the four options as the final answer.: {doc['query']}\nOptions:\n{formatted_options}\nAnswer:"
+            return f"The following is a multiple choice question about medical knowledge. Solve it in a step-by-step fashion, starting by summarizing the available information. Output a single option from the four options as the final answer.:\n{doc['query']}\nOptions:\n{formatted_options}\nAnswer:"
