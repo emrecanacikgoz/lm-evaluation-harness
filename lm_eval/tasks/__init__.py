@@ -79,37 +79,30 @@ from . import usmle_self_eval_step3
 from . import medmcqa_cot
 from . import medqa_usmle_cot
 from . import pubmedqa_cot
-from . import usmle_self_eval_step1_cot
-from . import usmle_self_eval_step2_cot
-from . import usmle_self_eval_step3_cot
+from . import usmle_step1_cot
+from . import usmle_step2_cot
+from . import usmle_step3_cot
 
 from . import medmcqa_sc
 from . import medqa_usmle_sc
 from . import pubmedqa_sc
-from . import usmle_self_eval_step1_sc
-from . import usmle_self_eval_step2_sc
-from . import usmle_self_eval_step3_sc
+from . import usmle_step1_sc
+from . import usmle_step2_sc
+from . import usmle_step3_sc
 
 from . import medmcqa_vot
 from . import medqa_usmle_vot
 from . import pubmedqa_vot
-from . import usmle_self_eval_step1_vot
-from . import usmle_self_eval_step2_vot
-from . import usmle_self_eval_step3_vot
-
-from . import medmcqa_mce
-from . import medqa_usmle_mce
-from . import pubmedqa_mce
-from . import usmle_self_eval_step1_mce
-from . import usmle_self_eval_step2_mce
-from . import usmle_self_eval_step3_mce
+from . import usmle_step1_vot
+from . import usmle_step2_vot
+from . import usmle_step3_vot
 
 from . import medmcqa_er
 from . import medqa_usmle_er
 from . import pubmedqa_er
-from . import usmle_self_eval_step1_er
-from . import usmle_self_eval_step2_er
-from . import usmle_self_eval_step3_er
+from . import usmle_step1_er
+from . import usmle_step2_er
+from . import usmle_step3_er
 
 ########################################
 # Translation tasks
@@ -407,37 +400,37 @@ TASK_REGISTRY = {
     "medmcqa_cot": medmcqa_cot.medmcqa_cot,
     "medqa_usmle_cot": medqa_usmle_cot.MedQA_USMLE_cot,
     "pubmedqa_cot": pubmedqa_cot.Pubmed_QA_cot,
-    "usmle_step1_cot": usmle_self_eval_step1_cot.usmle_self_eval_step1_cot,
-    "usmle_step2_cot": usmle_self_eval_step2_cot.usmle_self_eval_step2_cot,
-    "usmle_step3_cot": usmle_self_eval_step3_cot.usmle_self_eval_step3_cot,
+    "usmle_step1_cot": usmle_step1_cot.usmle_self_eval_step1_cot,
+    "usmle_step2_cot": usmle_step2_cot.usmle_self_eval_step2_cot,
+    "usmle_step3_cot": usmle_step3_cot.usmle_self_eval_step3_cot,
 
     "medmcqa_sc": medmcqa_sc.medmcqa_sc,
     "medqa_usmle_sc": medqa_usmle_sc.MedQA_USMLE_sc,
     "pubmedqa_sc": pubmedqa_sc.Pubmed_QA_sc,
-    "usmle_step1_sc": usmle_self_eval_step1_sc.usmle_self_eval_step1_sc,
-    "usmle_step2_sc": usmle_self_eval_step2_sc.usmle_self_eval_step2_sc,
-    "usmle_step3_sc": usmle_self_eval_step3_sc.usmle_self_eval_step3_sc,
+    "usmle_step1_sc": usmle_step1_sc.usmle_self_eval_step1_sc,
+    "usmle_step2_sc": usmle_step2_sc.usmle_self_eval_step2_sc,
+    "usmle_step3_sc": usmle_step3_sc.usmle_self_eval_step3_sc,
 
     "medmcqa_vot": medmcqa_vot.medmcqa_vot,
     "medqa_usmle_vot": medqa_usmle_vot.MedQA_USMLE_vot,
     "pubmedqa_vot": pubmedqa_vot.Pubmed_QA_vot,
-    "usmle_step1_vot": usmle_self_eval_step1_vot.usmle_self_eval_step1_vot,
-    "usmle_step2_vot": usmle_self_eval_step2_vot.usmle_self_eval_step2_vot,
-    "usmle_step3_vot": usmle_self_eval_step3_vot.usmle_self_eval_step3_vot,
+    "usmle_step1_vot": usmle_step1_vot.usmle_self_eval_step1_vot,
+    "usmle_step2_vot": usmle_step2_vot.usmle_self_eval_step2_vot,
+    "usmle_step3_vot": usmle_step3_vot.usmle_self_eval_step3_vot,
 
     "medmcqa_mce": medmcqa_mce.medmcqa_mce,
     "medqa_usmle_mce": medqa_usmle_mce.MedQA_USMLE_mce,
     "pubmedqa_mce": pubmedqa_mce.Pubmed_QA_mce,
-    "usmle_step1_mce": usmle_self_eval_step1_mce.usmle_self_eval_step1_mce,
-    "usmle_step2_mce": usmle_self_eval_step2_mce.usmle_self_eval_step2_mce,
-    "usmle_step3_mce": usmle_self_eval_step3_mce.usmle_self_eval_step3_mce,
+    "usmle_step1_mce": usmle_step1_mce.usmle_self_eval_step1_mce,
+    "usmle_step2_mce": usmle_step2_mce.usmle_self_eval_step2_mce,
+    "usmle_step3_mce": usmle_step3_mce.usmle_self_eval_step3_mce,
 
     "medmcqa_er": medmcqa_er.medmcqa_er,
     "medqa_usmle_er": medqa_usmle_er.MedQA_USMLE_er,
     "pubmedqa_er": pubmedqa_er.Pubmed_QA_er,
-    "usmle_step1_er": usmle_self_eval_step1_er.usmle_self_eval_step1_er,
-    "usmle_step2_er": usmle_self_eval_step2_er.usmle_self_eval_step2_er,
-    "usmle_step3_er": usmle_self_eval_step3_er.usmle_self_eval_step3_er,
+    "usmle_step1_er": usmle_step1_er.usmle_self_eval_step1_er,
+    "usmle_step2_er": usmle_step2_er.usmle_self_eval_step2_er,
+    "usmle_step3_er": usmle_step3_er.usmle_self_eval_step3_er,
 }
 
 
