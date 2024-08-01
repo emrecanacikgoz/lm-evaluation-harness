@@ -4,7 +4,7 @@ from lm_eval.base import MultipleChoiceTask
 CoT Prompts are implemented from the "Gemini Goes to Med School: Exploring the Capabilities of Multimodal Large Language Models on Medical Challenge Problems & Hallucinations": https://arxiv.org/pdf/2402.07023.pdf
 """
 
-class usmle_self_eval_step2_cot(MultipleChoiceTask):
+class usmle_self_eval_step2_sc(MultipleChoiceTask):
     VERSION = 0
     DATASET_PATH = "augtoma/usmle_self_eval_step2"
     DATASET_NAME = None

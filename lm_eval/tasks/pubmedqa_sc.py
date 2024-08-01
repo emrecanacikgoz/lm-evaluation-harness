@@ -34,7 +34,7 @@ _CITATION = """
 CoT Prompts are implemented from the "Gemini Goes to Med School: Exploring the Capabilities of Multimodal Large Language Models on Medical Challenge Problems & Hallucinations": https://arxiv.org/pdf/2402.07023.pdf
 """
 
-class Pubmed_QA_cot(Task):
+class Pubmed_QA_sc(Task):
     VERSION = 0
     DATASET_PATH = "pubmed_qa"
     DATASET_NAME = "pqa_labeled"

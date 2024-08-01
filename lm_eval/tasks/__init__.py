@@ -418,13 +418,6 @@ TASK_REGISTRY = {
     "usmle_step2_vot": usmle_step2_vot.usmle_self_eval_step2_vot,
     "usmle_step3_vot": usmle_step3_vot.usmle_self_eval_step3_vot,
 
-    "medmcqa_mce": medmcqa_mce.medmcqa_mce,
-    "medqa_usmle_mce": medqa_usmle_mce.MedQA_USMLE_mce,
-    "pubmedqa_mce": pubmedqa_mce.Pubmed_QA_mce,
-    "usmle_step1_mce": usmle_step1_mce.usmle_self_eval_step1_mce,
-    "usmle_step2_mce": usmle_step2_mce.usmle_self_eval_step2_mce,
-    "usmle_step3_mce": usmle_step3_mce.usmle_self_eval_step3_mce,
-
     "medmcqa_er": medmcqa_er.medmcqa_er,
     "medqa_usmle_er": medqa_usmle_er.MedQA_USMLE_er,
     "pubmedqa_er": pubmedqa_er.Pubmed_QA_er,

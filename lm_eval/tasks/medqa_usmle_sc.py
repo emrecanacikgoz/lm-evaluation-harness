@@ -26,7 +26,7 @@ _CITATION = """
 CoT Prompts are implemented from the "Gemini Goes to Med School: Exploring the Capabilities of Multimodal Large Language Models on Medical Challenge Problems & Hallucinations": https://arxiv.org/pdf/2402.07023.pdf
 """
 
-class MedQA_USMLE_cot(MultipleChoiceTask):
+class MedQA_USMLE_sc(MultipleChoiceTask):
     VERSION = 0
     DATASET_PATH = "augtoma/medqa_usmle"
     DATASET_NAME = None
